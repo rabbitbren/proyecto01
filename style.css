@@ -12,30 +12,37 @@ body {
 }
 
 .grid-container{
-    margin: 0 1em;
     background: lemonchiffon;
 
     display: grid;
     grid-template-rows: 2fr 4fr 1fr;
-    row-gap: 0.4em;
+    grid-template-columns: 80% 20%;
+    grid-gap: 1em;
+    grid-template-areas:  "cabecera cabecera"
+                            "s_principal s_secundaria"
+                            "pie_pagina pie_pagina";
 }
 
 
 .container-cabecera {
     background: lightblue;
+    grid-area: cabecera;
 }
 
 
 .container-principal {
     background: lightpink;
+    grid-area: s_principal;
 }
 
 
 .container-secundario {
     background: lightcyan;
+    grid-area: s_secundaria;
 }
 
 
 .container-pie {
     background: lightcoral;
+    grid-area: pie_pagina;
 }
