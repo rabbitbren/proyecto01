@@ -2,4 +2,40 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-size: 1rem;
+    background: #EAEAEA;
+}
+
+.grid-container{
+    margin: 0 1em;
+    background: lemonchiffon;
+
+    display: grid;
+    grid-template-rows: 2fr 4fr 1fr;
+    row-gap: 0.4em;
+}
+
+
+.container-cabecera {
+    background: lightblue;
+}
+
+
+.container-principal {
+    background: lightpink;
+}
+
+
+.container-secundario {
+    background: lightcyan;
+}
+
+
+.container-pie {
+    background: lightcoral;
 }
