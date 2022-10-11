@@ -15,10 +15,10 @@ body {
     background: lemonchiffon;
 
     display: grid;
-    grid-template-rows: 2fr 4fr 1fr;
+    grid-template-rows: 2fr 6fr 1fr;
     grid-template-columns: 80% 20%;
-    grid-gap: 1em;
-    grid-template-areas:  "cabecera cabecera"
+    /* grid-gap: 1em; */
+    grid-template-areas:    "cabecera cabecera"
                             "s_principal s_secundaria"
                             "pie_pagina pie_pagina";
 }
@@ -27,6 +27,30 @@ body {
 .container-cabecera {
     background: lightblue;
     grid-area: cabecera;
+
+    display: grid;
+    grid-template-columns:20% 80%;
+    grid-template-rows: 50% auto;
+    grid-template-areas:    "s_logo s_barra-navegadora"
+                            "s_slide s_slide";
+}
+.cabecera-logo {
+    background: lightcoral;
+    grid-area: s_logo;
+}
+.cabecera-slide {
+    background: lightseagreen;
+    grid-area: s_slide;
+}
+.cabecera-nav {
+    background: lightgreen;
+    grid-area: s_barra-navegadora;
+}
+.cabecera-nav > ul {
+    display: grid;
+    grid-template-columns: repeat(5, 17.5%);
+    justify-content: flex-end;
+    justify-items: flex-end;
 }
 
 
