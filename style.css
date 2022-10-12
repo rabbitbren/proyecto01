@@ -23,7 +23,6 @@ body {
     grid-template-areas:    "cabecera cabecera"
                             "s_principal s_secundaria"
                             "pie_pagina pie_pagina";
-    row-gap: 3%;
 }
 
 /* cabecera del sitio(logo, slide, barra navegadora), maquetacion con display grid */
@@ -101,7 +100,7 @@ body {
     color: #EAEAEA;
 }
 
-
+/* division de la seccion principal del sitio */
 .container-principal {
     /* background: lightpink; */
     grid-area: s_principal;
@@ -109,34 +108,38 @@ body {
     display: grid;
     grid-template-rows: repeat(7, 1fr);
     /* row-gap: 2%; */
-    margin: 0 2%;
+    /* margin: 0 2%; */
 }
 .pricipal-seccion {
     /* background: lightsteelblue; */
     display: grid;
-    grid-template-rows: 1fr 4fr 1fr;
-    grid-gap: 2em;
-    padding: 1em;
-    margin-top: 3%;
-    /* border-top: #07020D 0.2em solid; */
-    box-shadow: 0.4em 0.2em 1em #9eafb8;
+    grid-template-rows: repeat(3, auto);
+    row-gap: 2%;
+    padding: 1.5em;
+    margin: 3% 3%;
+    box-shadow: 0.2em 0.2em 1em #9eafb8;
     border-radius: 0.3em;
 }
 .seccion_tarjetas {
-    /* background: lime; */
-
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 1em;
+    column-gap: 2em;
 }
-/* .seccion_tarjetas > div {
-    background: violet;
-} */
 .seccion_tarjetas .tarjetas {
-    background: lightcoral;
     display: grid;
-    grid-template-rows: 3fr 1fr;
+    grid-template-rows: auto auto;
 }
+/* .tarjetas .tarjetas_imagen{
+    background: #CEFF1A;
+    height: 100%;
+} */
+.tarjetas .tarjetas_imagen > img {
+    width: 100%;
+    aspect-ratio: 1 / 1.5;
+    /* object-fit: cover;
+    height: 100%; */
+}
+
 
 .container-secundario {
     background: lightcyan;
