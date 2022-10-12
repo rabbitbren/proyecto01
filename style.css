@@ -9,54 +9,93 @@
 body {
     font-size: 1rem;
     background: #EAEAEA;
+    width: 100%;
 }
 
+/* contenedor general, uso de display grid para su maquetacion */
 .grid-container{
     background: lemonchiffon;
+    width: 100%;
 
     display: grid;
-    grid-template-rows: 2fr 6fr 1fr;
+    grid-template-rows: auto auto auto;
     grid-template-columns: 80% 20%;
-    /* grid-gap: 1em; */
     grid-template-areas:    "cabecera cabecera"
                             "s_principal s_secundaria"
                             "pie_pagina pie_pagina";
+    /* grid-gap: 4em; */
 }
 
-
+/* cabecera del sitio(logo, slide, barra navegadora), maquetacion con display grid */
 .container-cabecera {
     background: lightblue;
     grid-area: cabecera;
 
     display: grid;
     grid-template-columns:20% 80%;
-    grid-template-rows: 50% auto;
+    grid-template-rows: 4em auto;
     grid-template-areas:    "s_logo s_barra-navegadora"
                             "s_slide s_slide";
 }
+
+
 .cabecera-logo {
     background: lightcoral;
     grid-area: s_logo;
+    display: grid;
+    justify-content: center;
+    align-content: center;
 }
+.logo-imagen {
+    background: whitesmoke;
+    width: 80%;
+    height: auto;
+}
+
+
 .cabecera-slide {
     background: lightseagreen;
     grid-area: s_slide;
+    display: grid;
+    justify-content: center;
+    width: 80%;
+    height: auto;
 }
+.slide-imagen {
+    background: whitesmoke;
+}
+
 .cabecera-nav {
     background: lightgreen;
     grid-area: s_barra-navegadora;
+    display: grid;
+    justify-content: flex-end;
 }
 .cabecera-nav > ul {
     display: grid;
-    grid-template-columns: repeat(5, 17.5%);
-    justify-content: flex-end;
-    justify-items: flex-end;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 1.2em;
+    justify-items: center;
+    align-items: center;
+}
+.cabecera-nav > ul > li {
+    padding: 0.2em 1.2em;
+    border-top: transparent 0.2em solid;
 }
 
 
 .container-principal {
     background: lightpink;
     grid-area: s_principal;
+
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    grid-gap: 0.4em;
+}
+.pricipal-seccion {
+    background: lightsteelblue;
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
 }
 
 
