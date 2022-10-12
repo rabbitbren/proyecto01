@@ -8,7 +8,7 @@
 
 body {
     font-size: 1rem;
-    background: #EAEAEA;
+    background: #F7FFF7;
     width: 100%;
 }
 
@@ -93,7 +93,7 @@ body {
     border-top: transparent 0.2em solid;
 }
 .cabecera-nav > ul > li:hover {
-    border-top: 0.1em #CEFF1A solid;
+    border-top: 0.1em #FF0022 solid;
     transition: all 400ms ease-in;
 }
 .cabecera-nav > ul > li > a {
@@ -111,7 +111,7 @@ body {
     /* margin: 0 2%; */
 }
 .pricipal-seccion {
-    /* background: lightsteelblue; */
+    /* background: #E1EFE6; */
     display: grid;
     grid-template-rows: repeat(3, auto);
     row-gap: 2%;
@@ -129,10 +129,6 @@ body {
     display: grid;
     grid-template-rows: auto auto;
 }
-/* .tarjetas .tarjetas_imagen{
-    background: #CEFF1A;
-    height: 100%;
-} */
 .tarjetas .tarjetas_imagen > img {
     width: 100%;
     aspect-ratio: 1 / 1.5;
