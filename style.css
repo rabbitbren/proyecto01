@@ -14,7 +14,7 @@ body {
 
 /* contenedor general, uso de display grid para su maquetacion */
 .grid-container{
-    background: lemonchiffon;
+    /* background: lemonchiffon; */
     width: 100%;
 
     display: grid;
@@ -23,12 +23,12 @@ body {
     grid-template-areas:    "cabecera cabecera"
                             "s_principal s_secundaria"
                             "pie_pagina pie_pagina";
-    /* grid-gap: 4em; */
+    row-gap: 3%;
 }
 
 /* cabecera del sitio(logo, slide, barra navegadora), maquetacion con display grid */
 .container-cabecera {
-    background: lightblue;
+    background: #07020D;
     grid-area: cabecera;
 
     display: grid;
@@ -36,11 +36,12 @@ body {
     grid-template-rows: 1fr 10fr;
     grid-template-areas:    "s_logo s_barra-navegadora"
                             "s_slide s_slide";
+    padding: 1em 1em 2em 1em;
 }
 
 
 .cabecera-logo {
-    background: lightcoral;
+    /* background: lightcoral; */
     grid-area: s_logo;
     display: flex;
     justify-content: center;
@@ -57,10 +58,11 @@ body {
 
 
 .cabecera-slide {
-    background: lightseagreen;
+    /* background: lightseagreen; */
     grid-area: s_slide;
     display: flex;
     justify-content: center;
+    padding-top: 1em;
 }
 .slide-imagen {
     /* background: whitesmoke; */
@@ -73,8 +75,9 @@ body {
     width: 100%;
 }
 
+
 .cabecera-nav {
-    background: lightgreen;
+    /* background: lightgreen; */
     grid-area: s_barra-navegadora;
     display: grid;
     justify-content: flex-end;
@@ -90,6 +93,13 @@ body {
     padding: 0.2em 1.2em;
     border-top: transparent 0.2em solid;
 }
+.cabecera-nav > ul > li:hover {
+    border-top: 0.1em #CEFF1A solid;
+    transition: all 400ms ease-in;
+}
+.cabecera-nav > ul > li > a {
+    color: #EAEAEA;
+}
 
 
 .container-principal {
@@ -103,7 +113,20 @@ body {
 .pricipal-seccion {
     background: lightsteelblue;
     display: grid;
-    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 6fr 1fr;
+    grid-gap: 2em;
+    padding: 1em;
+}
+.seccion_tarjetas {
+    background: lime;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1em;
+    
+}
+.seccion_tarjetas > div {
+    background: violet;
 }
 
 
