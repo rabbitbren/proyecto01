@@ -33,7 +33,7 @@ body {
 
     display: grid;
     grid-template-columns:20% 80%;
-    grid-template-rows: 4em auto;
+    grid-template-rows: 1fr 10fr;
     grid-template-areas:    "s_logo s_barra-navegadora"
                             "s_slide s_slide";
 }
@@ -42,27 +42,35 @@ body {
 .cabecera-logo {
     background: lightcoral;
     grid-area: s_logo;
-    display: grid;
+    display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 }
 .logo-imagen {
-    background: whitesmoke;
-    width: 80%;
+    /* background: whitesmoke; */
+    width: 40%;
     height: auto;
+}
+.logo-imagen > img {
+    width: 100%;
 }
 
 
 .cabecera-slide {
     background: lightseagreen;
     grid-area: s_slide;
-    display: grid;
+    display: flex;
     justify-content: center;
-    width: 80%;
-    height: auto;
 }
 .slide-imagen {
-    background: whitesmoke;
+    /* background: whitesmoke; */
+    width: 50em;
+    height: auto;
+    display: flex;
+    justify-items: center;
+}
+.slide-imagen > img {
+    width: 100%;
 }
 
 .cabecera-nav {
